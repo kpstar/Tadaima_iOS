@@ -1,0 +1,6 @@
+framework module Pods_Tadaima {
+  umbrella header "Pods-Tadaima-umbrella.h"
+
+  export *
+  module * { export * }
+}
