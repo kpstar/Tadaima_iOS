@@ -7,11 +7,49 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ParentLoginViewController: UIViewController {
     
+    @IBOutlet weak var login_btn: UIButton!
+    @IBOutlet weak var signup_btn: UIButton!
+    
+    var bannerView: GADBannerView = GADBannerView(adSize: kGADAdSizeBanner)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        customizeUI()
+        self.showAdMob()
+    }
+    
+    func customizeUI() {
         
+        login_btn.setTitleColor(UIColor.white, for: .normal)
+        login_btn.layer.cornerRadius = 4.0
+        login_btn.layer.borderColor = UIColor.white.cgColor
+        login_btn.layer.borderWidth = 0.5
+        login_btn.layer.backgroundColor = UIColor.colorBlue.cgColor
+        login_btn.setTitle(NSLocalizedString("login_button_email_title", comment: ""), for: .normal)
+        
+        signup_btn.setTitleColor(UIColor.white, for: .normal)
+        signup_btn.layer.cornerRadius = 4.0
+        signup_btn.layer.backgroundColor = UIColor.secButtonColor.cgColor
+        signup_btn.setTitle(NSLocalizedString("signup_button_email_title", comment: ""), for: .normal)
+        
+    }
+    
+    @IBAction func loginBtn_clicked(_ sender: UIButton) {
+        
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "Login") as? LoginViewController
+        vc?.method = 0
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    @IBAction func signupBtn_clicked(_ sender: Any) {
+        
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "Login") as? LoginViewController
+        vc?.method = 1
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
 }

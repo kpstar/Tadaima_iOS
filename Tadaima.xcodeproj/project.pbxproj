@@ -12,8 +12,20 @@
 		082FC834220EC6F70030A56A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082FC832220EC6F70030A56A /* Main.storyboard */; };
 		082FC836220EC6F80030A56A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 082FC835220EC6F80030A56A /* Assets.xcassets */; };
 		082FC839220EC6F80030A56A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082FC837220EC6F80030A56A /* LaunchScreen.storyboard */; };
+		086159F0220FBF3100CA77FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 086159EF220FBF3100CA77FE /* GoogleService-Info.plist */; };
+		086159F2220FD1C100CA77FE /* CameraQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086159F1220FD1C100CA77FE /* CameraQRViewController.swift */; };
+		086159F4220FD1D500CA77FE /* LibraryQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086159F3220FD1D500CA77FE /* LibraryQRViewController.swift */; };
+		08615A3A2210FC7000CA77FE /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08615A392210FC7000CA77FE /* StringExtension.swift */; };
+		08615A3C221118E300CA77FE /* ConfirmQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08615A3B221118E300CA77FE /* ConfirmQRViewController.swift */; };
+		08615A4022118BA700CA77FE /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08615A3F22118BA700CA77FE /* ViewControllerExtension.swift */; };
+		08615A422211C44700CA77FE /* PhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08615A412211C44700CA77FE /* PhoneLoginViewController.swift */; };
+		08615A442211C45900CA77FE /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08615A432211C45900CA77FE /* PhoneVerificationViewController.swift */; };
 		08CE8CDA220EE497009D41F4 /* ParentLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CE8CD9220EE497009D41F4 /* ParentLoginViewController.swift */; };
 		08CE8CDC220EE4AC009D41F4 /* ChildLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CE8CDB220EE4AC009D41F4 /* ChildLoginViewController.swift */; };
+		08CE8D23220F7349009D41F4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CE8D22220F7349009D41F4 /* UIColorExtension.swift */; };
+		08CE8D25220F7C6E009D41F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CE8D24220F7C6E009D41F4 /* LoginViewController.swift */; };
+		08CE8D42220F8577009D41F4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08CE8D44220F8577009D41F4 /* Localizable.strings */; };
+		08CE8D49220F8B41009D41F4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08CE8D4B220F8B41009D41F4 /* InfoPlist.strings */; };
 		14CD9F11B262B76963529CC1 /* Pods_Tadaima.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E475DDBF0D1F248CB0D1743 /* Pods_Tadaima.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,8 +38,24 @@
 		082FC838220EC6F80030A56A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		082FC83A220EC6F80030A56A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		082FC858220EC8760030A56A /* Tadaima.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tadaima.entitlements; sourceTree = "<group>"; };
+		086159EF220FBF3100CA77FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		086159F1220FD1C100CA77FE /* CameraQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraQRViewController.swift; sourceTree = "<group>"; };
+		086159F3220FD1D500CA77FE /* LibraryQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryQRViewController.swift; sourceTree = "<group>"; };
+		08615A392210FC7000CA77FE /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		08615A3B221118E300CA77FE /* ConfirmQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmQRViewController.swift; sourceTree = "<group>"; };
+		08615A3F22118BA700CA77FE /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		08615A412211C44700CA77FE /* PhoneLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginViewController.swift; sourceTree = "<group>"; };
+		08615A432211C45900CA77FE /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
 		08CE8CD9220EE497009D41F4 /* ParentLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentLoginViewController.swift; sourceTree = "<group>"; };
 		08CE8CDB220EE4AC009D41F4 /* ChildLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildLoginViewController.swift; sourceTree = "<group>"; };
+		08CE8D22220F7349009D41F4 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		08CE8D24220F7C6E009D41F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		08CE8D3E220F8495009D41F4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		08CE8D3F220F8496009D41F4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		08CE8D43220F8577009D41F4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		08CE8D45220F857D009D41F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		08CE8D4A220F8B41009D41F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		08CE8D4C220F8B42009D41F4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7DD776212663858789AFB7A3 /* Pods-Tadaima.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tadaima.release.xcconfig"; path = "Target Support Files/Pods-Tadaima/Pods-Tadaima.release.xcconfig"; sourceTree = "<group>"; };
 		8E475DDBF0D1F248CB0D1743 /* Pods_Tadaima.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tadaima.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC04E70EC1583EDF8A09E03E /* Pods-Tadaima.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tadaima.debug.xcconfig"; path = "Target Support Files/Pods-Tadaima/Pods-Tadaima.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,12 +94,15 @@
 		082FC82D220EC6F70030A56A /* Tadaima */ = {
 			isa = PBXGroup;
 			children = (
+				08CE8D46220F8B0E009D41F4 /* Localization */,
+				08CE8D21220F7317009D41F4 /* Extensions */,
 				08CE8CD8220EDB80009D41F4 /* ViewControllers */,
 				082FC858220EC8760030A56A /* Tadaima.entitlements */,
 				082FC82E220EC6F70030A56A /* AppDelegate.swift */,
 				082FC832220EC6F70030A56A /* Main.storyboard */,
 				082FC835220EC6F80030A56A /* Assets.xcassets */,
 				082FC837220EC6F80030A56A /* LaunchScreen.storyboard */,
+				086159EF220FBF3100CA77FE /* GoogleService-Info.plist */,
 				082FC83A220EC6F80030A56A /* Info.plist */,
 			);
 			path = Tadaima;
@@ -83,8 +114,33 @@
 				082FC830220EC6F70030A56A /* SelectViewController.swift */,
 				08CE8CD9220EE497009D41F4 /* ParentLoginViewController.swift */,
 				08CE8CDB220EE4AC009D41F4 /* ChildLoginViewController.swift */,
+				08CE8D24220F7C6E009D41F4 /* LoginViewController.swift */,
+				086159F1220FD1C100CA77FE /* CameraQRViewController.swift */,
+				086159F3220FD1D500CA77FE /* LibraryQRViewController.swift */,
+				08615A3B221118E300CA77FE /* ConfirmQRViewController.swift */,
+				08615A412211C44700CA77FE /* PhoneLoginViewController.swift */,
+				08615A432211C45900CA77FE /* PhoneVerificationViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		08CE8D21220F7317009D41F4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				08CE8D22220F7349009D41F4 /* UIColorExtension.swift */,
+				08615A392210FC7000CA77FE /* StringExtension.swift */,
+				08615A3F22118BA700CA77FE /* ViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		08CE8D46220F8B0E009D41F4 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				08CE8D44220F8577009D41F4 /* Localizable.strings */,
+				08CE8D4B220F8B41009D41F4 /* InfoPlist.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		22A9A9DC85EB49959F7835B2 /* Pods */ = {
@@ -157,6 +213,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 082FC822220EC6F70030A56A;
 			productRefGroup = 082FC82C220EC6F70030A56A /* Products */;
@@ -174,8 +231,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				082FC839220EC6F80030A56A /* LaunchScreen.storyboard in Resources */,
+				08CE8D42220F8577009D41F4 /* Localizable.strings in Resources */,
 				082FC836220EC6F80030A56A /* Assets.xcassets in Resources */,
 				082FC834220EC6F70030A56A /* Main.storyboard in Resources */,
+				08CE8D49220F8B41009D41F4 /* InfoPlist.strings in Resources */,
+				086159F0220FBF3100CA77FE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,8 +283,10 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/KYDrawerController/KYDrawerController.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftIcons/SwiftIcons.framework",
 				"${BUILT_PRODUCTS_DIR}/ZAlertView/ZAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/iCarousel/iCarousel.framework",
@@ -243,8 +305,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KYDrawerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftIcons.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iCarousel.framework",
@@ -285,8 +349,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08615A4022118BA700CA77FE /* ViewControllerExtension.swift in Sources */,
+				08CE8D25220F7C6E009D41F4 /* LoginViewController.swift in Sources */,
+				08615A3A2210FC7000CA77FE /* StringExtension.swift in Sources */,
+				08615A422211C44700CA77FE /* PhoneLoginViewController.swift in Sources */,
+				086159F4220FD1D500CA77FE /* LibraryQRViewController.swift in Sources */,
+				086159F2220FD1C100CA77FE /* CameraQRViewController.swift in Sources */,
 				082FC831220EC6F70030A56A /* SelectViewController.swift in Sources */,
 				08CE8CDC220EE4AC009D41F4 /* ChildLoginViewController.swift in Sources */,
+				08615A3C221118E300CA77FE /* ConfirmQRViewController.swift in Sources */,
+				08615A442211C45900CA77FE /* PhoneVerificationViewController.swift in Sources */,
+				08CE8D23220F7349009D41F4 /* UIColorExtension.swift in Sources */,
 				082FC82F220EC6F70030A56A /* AppDelegate.swift in Sources */,
 				08CE8CDA220EE497009D41F4 /* ParentLoginViewController.swift in Sources */,
 			);
@@ -299,6 +372,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				082FC833220EC6F70030A56A /* Base */,
+				08CE8D3E220F8495009D41F4 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -307,8 +381,27 @@
 			isa = PBXVariantGroup;
 			children = (
 				082FC838220EC6F80030A56A /* Base */,
+				08CE8D3F220F8496009D41F4 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		08CE8D44220F8577009D41F4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				08CE8D43220F8577009D41F4 /* ja */,
+				08CE8D45220F857D009D41F4 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		08CE8D4B220F8B41009D41F4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				08CE8D4A220F8B41009D41F4 /* en */,
+				08CE8D4C220F8B42009D41F4 /* ja */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -318,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -379,6 +473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

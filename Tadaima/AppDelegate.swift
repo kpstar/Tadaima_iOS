@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import IQKeyboardManager
+import GoogleMobileAds
+import Firebase
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        IQKeyboardManager.shared().isEnabled = true
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-3350101969936788~1374646292")
+        FirebaseApp.configure()
+        
         return true
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print("APNs device token: \(deviceToken.reduce("", {$0 + String(format: "%02X", $1)}))")
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -1,0 +1,128 @@
+/* 
+  Localizable.strings
+  Tadaima
+
+  Created by KpStar on 2/10/19.
+  Copyright © 2019 Tadaima. All rights reserved.
+*/
+
+"app_name" = "Tadaima";
+
+"login_parent_title" = "Parents";
+  
+"login_children_title" = "Children";
+  
+"login_button_email_title" = "Login with email address";
+  
+"signup_button_email_title" = "Register with email address";
+
+"login_button_scanqr_title" = "Scan QR";
+  
+"login_button_library_title" = "Scan from Gallery";
+  
+"import_photo_from_library_title" = "Import from Gallery";
+  
+"confirm_child_button_title" = "Confirm";
+
+"email_error_alert" = "Wrong Email Format";
+
+"phone_error_alert" = "Wrong Phone Number Format";
+
+"password_error_alert" = "You should input 6 characters at least";
+
+"qrcode_error_alert" = "Please import right QRCode";
+
+"alert_message_title" = "Alert";
+
+"alert_message_button_close" = "OK";
+  
+"profile_photo_change_title" = "Click to change photo";
+  
+"mobile_number_text_placeholder" = "Enter mobile number";
+  
+"terms_and_condition_title" = "Terms and condition";
+  
+"terms_and_condition_content" = "";
+  
+"phone_auth_button_title" = "Accept and proceed";
+  
+"spinner_loading_title_verification" = "Signing in...";
+  
+"spinner_loading_information" = "Loading...";
+  
+"phone_verification_label_title" = "Verifying your number";
+  
+"phone_verification_hint_title" = "tap to key in manually";
+
+"login_text_email_placeholder" = "Email";
+  
+"login_text_password_placeholder" = "Password";
+  
+"email_login_button_title" = "Sign In";
+  
+"email_signup_button_title" = "Register";
+  
+"parent_family_name_placeholder_title" = "Enter family name";
+  
+"parent_set_home_button_title" = "Set home location";
+  
+"parent_add_children_button_title" = "Add your children";
+  
+"child_name_label_placeholder_title" = "Child name";
+  
+"child_age_label_placeholder_title" = "Age";
+  
+"parent_save_qrcode_to_gallery_msg" = "Successfully saved to gallery";
+  
+"parent_save_qrcode_to_gallery_alert" = "Error occured to save to gallery";
+  
+"child_contact_number_label_placeholder_title" = "Emergency contact number";
+  
+"child_generate_qr_button_title" = "Generate QR";
+  
+"parent_qr_code_desc_title" = "Bring child phone and scan";
+
+"parent_qr_save_button_title" = "Save to Gallery";
+  
+"children_qr_scan_complete_button_title" = "Scan complete";
+  
+"children_scan_description_text" = "Please Scan QRCode";
+  
+"children_qr_description_label_title" = "Notification will be sent to your parents automatically when you reach home!";
+  
+"children_qr_accept_gps_button_title" = "Accept GPS permission";
+  
+"main_manually_update_button_title" = "Manually Update Location";
+  
+"main_painc_mode_button_title" = "PANIC MODE";
+
+"alert_empty_familyname_text" = "Please insert your family name";
+  
+"alert_empty_child_name_title" = "Please insert child name";
+  
+"alert_empty_child_age_title" = "Please insert child age";
+  
+"alert_empty_child_number_title" = "Please insert emergency contact number";
+  
+"alert_empty_home_location" = "Please set your home location";
+  
+"drawer_menu_home" = "Home";
+  
+"drawer_menu_map" = "Map";
+  
+"drawer_childmenu_home" = "Home";
+  
+"drawer_childmenu_emergency" = "Emergency";
+  
+"drawer_menu_logout" = "Log out";
+  
+"drawer_menu_logout_title" = "Are you sure ?";
+  
+"drawer_menu_logout_description" = "Are you sure to log out ?";
+  
+"drawer_menu_logout_yes" = "Yes";
+  
+"drawer_menu_logout_no" = "No";
+
+"drawer_menu_phone_number" = "Change Phone Number";
+

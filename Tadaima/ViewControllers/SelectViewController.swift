@@ -8,10 +8,14 @@
 
 import UIKit
 
+let mainStoryboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
+
 class SelectViewController: UIViewController {
     
     @IBOutlet weak var parent_img: UIImageView!
     @IBOutlet weak var child_img: UIImageView!
+    @IBOutlet weak var parent_lbl: UILabel!
+    @IBOutlet weak var child_lbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +27,16 @@ class SelectViewController: UIViewController {
         let c_tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(c_imageTapped(tapGestureRecognizer:)))
         child_img.isUserInteractionEnabled = true
         child_img.addGestureRecognizer(c_tapGestureRecognizer)
+        
+        parent_lbl.text = NSLocalizedString("login_parent_title", comment: "")
+        child_lbl.text = NSLocalizedString("login_children_title", comment: "")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         parent_img.alpha = 1.0
         child_img.alpha = 1.0
+        
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
@@ -41,17 +49,20 @@ class SelectViewController: UIViewController {
     {
         let tappedImage = tapGestureRecognizer.view as! UIImageView
         tappedImage.alpha = 0.3
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ChildLogin") as? ChildLoginViewController
-        self.navigationController?.pushViewController(vc!, animated: true)
-
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            let vc = mainStoryboard.instantiateViewController(withIdentifier: "ChildLogin") as? ChildLoginViewController
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
     }
     
     @objc func p_imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         let tappedImage = tapGestureRecognizer.view as! UIImageView
         tappedImage.alpha = 0.3
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ParentLogin") as? ParentLoginViewController
-        self.navigationController?.pushViewController(vc!, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            let vc = mainStoryboard.instantiateViewController(withIdentifier: "ParentLogin") as? ParentLoginViewController
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
     }
 
 }
