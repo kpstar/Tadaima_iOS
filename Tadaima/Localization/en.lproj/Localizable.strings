@@ -40,7 +40,7 @@
   
 "mobile_number_text_placeholder" = "Enter mobile number";
   
-"terms_and_condition_title" = "Terms and condition";
+"terms_and_condition_title" = "\nTerms and condition \n\nPlease read these terms and conditions\n of use carefully before accessing, using or\n obtaining any materials, information, products\n or service. By using our application, you\n accept to our terms and condition.\n We hold full rights to this application.\n Your personal information such as email\n address, phone number and gps location\n will not be used to violate your privacy nor\n in violation of the law. If you've understand\n the terms above, click accept and proceed\n forward.\n Thank you\n";
   
 "terms_and_condition_content" = "";
   
@@ -105,6 +105,8 @@
 "alert_empty_child_number_title" = "Please insert emergency contact number";
   
 "alert_empty_home_location" = "Please set your home location";
+
+"alert_something_went_wrong" = "Something went wrong.";
   
 "drawer_menu_home" = "Home";
   

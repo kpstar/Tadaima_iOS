@@ -92,10 +92,12 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle"
   install_resource "${PODS_ROOT}/ZDCChat/ZDCChatStrings.bundle"
   install_resource "${PODS_ROOT}/ZDCChat/ZDCChat.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle"
   install_resource "${PODS_ROOT}/ZDCChat/ZDCChatStrings.bundle"
   install_resource "${PODS_ROOT}/ZDCChat/ZDCChat.bundle"
 fi

@@ -18,16 +18,12 @@ class CameraQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: AVMediaType.video, position: .back)
-        
-        guard let captureDevice = deviceDiscoverySession.devices.first else {
-            print("Failed to get the camera device")
-            return
-        }
+        guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
+        let input: AVCaptureDeviceInput
         
         do {
             // Get an instance of the AVCaptureDeviceInput class using the previous device object.
-            let input = try AVCaptureDeviceInput(device: captureDevice)
+            let input = try AVCaptureDeviceInput(device: videoCaptureDevice)
             // Set the input device on the capture session.
             captureSession.addInput(input)
             

@@ -23,7 +23,10 @@ extension UIViewController {
     
     func showAlertMessage(text: String) {
         let title = NSLocalizedString("alert_message_title", comment: "")
-        let dialog = ZAlertView(title: title, message: text, alertType: ZAlertView.AlertType(rawValue: 0)!)
+        let dialog = ZAlertView(title: title, message: text, closeButtonText: NSLocalizedString("alert_message_button_close", comment: ""), closeButtonHandler:
+        { alertView in
+            alertView.dismissAlertView()
+        })
         dialog.show()
     }
     

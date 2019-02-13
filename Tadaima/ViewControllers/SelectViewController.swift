@@ -8,8 +8,6 @@
 
 import UIKit
 
-let mainStoryboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
-
 class SelectViewController: UIViewController {
     
     @IBOutlet weak var parent_img: UIImageView!

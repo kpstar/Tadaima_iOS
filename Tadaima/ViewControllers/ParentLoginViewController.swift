@@ -48,8 +48,10 @@ class ParentLoginViewController: UIViewController {
     
     @IBAction func signupBtn_clicked(_ sender: Any) {
         
-        let vc = mainStoryboard.instantiateViewController(withIdentifier: "Login") as? LoginViewController
-        vc?.method = 1
+//        let vc = mainStoryboard.instantiateViewController(withIdentifier: "Login") as? LoginViewController
+//        vc?.method = 1
+//        self.navigationController?.pushViewController(vc!, animated: true)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "PhoneLogin") as? PhoneLoginViewController
         self.navigationController?.pushViewController(vc!, animated: true)
     }
 }

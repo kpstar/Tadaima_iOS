@@ -9,6 +9,7 @@
 import UIKit
 import SkyFloatingLabelTextField
 import Firebase
+import MBProgressHUD
 
 class LoginViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var login_btn: UIButton!
     
     var method = Int()
+    var ref = Database.database().reference()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +52,8 @@ class LoginViewController: UIViewController {
         let emailTxt = email_txt.text
         let passwordTxt = password_txt.text
         
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        
         if emailTxt?.isValidEmail() == false {
             errorKey = "email_error_alert"
         }
@@ -61,18 +65,36 @@ class LoginViewController: UIViewController {
             self.showAlertMessageWithKey(key: errorKey)
         }
         
+        let firebaseAuth = Auth.auth()
+        
         if method == 1 {
-            Auth.auth().createUser(withEmail: emailTxt!, password: passwordTxt!) { (result, error) in
+            firebaseAuth.createUser(withEmail: emailTxt!, password: passwordTxt!) { (result, error) in
+                
+                MBProgressHUD.hide(for: self.view, animated: true)
                 
                 if error != nil {
                     this.showAlertMessage(text: (error?.localizedDescription)!)
                 }
                 
-                let user = result?.user
-                let uid = user?.uid
+                guard let user = result?.user else { return }
+                self.ref.child(mParent + user.uid).setValue([mToken: token!, mFamilyName: "", mLocation: [mLatitude:0, mLongitude:0], mEmail: user.email as! String, mPhoneNumber: ""])
+                let vc = mainStoryboard.instantiateViewController(withIdentifier: "PhoneLogin") as? PhoneLoginViewController
+                self.navigationController?.pushViewController(vc!, animated: true)
             }
             return;
         }
         
+        firebaseAuth.signIn(withEmail: emailTxt!, password: passwordTxt!) { (result, error) in
+            
+            MBProgressHUD.hide(for: self.view, animated: true)
+            
+            if error != nil {
+                this.showAlertMessage(text: (error?.localizedDescription)!)
+            }
+            
+            guard (result?.user) != nil else { return }
+            let vc = mainStoryboard.instantiateViewController(withIdentifier: "ParentInfo") as? ParentInfoViewController
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
     }
 }

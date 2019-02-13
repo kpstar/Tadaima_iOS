@@ -50,7 +50,6 @@ class LibraryQRViewController: UIViewController, UIImagePickerControllerDelegate
             for feature in features as! [CIQRCodeFeature] {
                 qrCodeLink += feature.messageString!
             }
-            
             if qrCodeLink.isValidQRCode() {
                 let vc = mainStoryboard.instantiateViewController(withIdentifier: "ConfirmQR") as? ConfirmQRViewController
                 vc?.qrCode = qrCodeLink
@@ -58,9 +57,8 @@ class LibraryQRViewController: UIViewController, UIImagePickerControllerDelegate
             } else {
                 self.showAlertMessageWithKey(key: "qrcode_error_alert")
             }
-        }
-        else{
-            print("Something went wrong")
+        } else {
+            self.showAlertMessageWithKey(key: "alert_something_went_wrong")
         }
         self.dismiss(animated: true, completion: nil)
     }
