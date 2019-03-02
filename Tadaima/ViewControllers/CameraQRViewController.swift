@@ -19,7 +19,6 @@ class CameraQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
         super.viewDidLoad()
 
         guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
-        let input: AVCaptureDeviceInput
         
         do {
             // Get an instance of the AVCaptureDeviceInput class using the previous device object.

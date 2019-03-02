@@ -21,6 +21,15 @@ extension UIViewController {
         dialog.show()
     }
     
+    func showSuccessMessageWithKey(key: String) {
+        let title = NSLocalizedString("success_message_title", comment: "")
+        let content = NSLocalizedString(key, comment: "")
+        let dialog = ZAlertView(title: title, message: content, closeButtonText: NSLocalizedString("alert_message_button_close", comment: ""), closeButtonHandler: { alertView in
+            alertView.dismissAlertView()
+        })
+        dialog.show()
+    }
+    
     func showAlertMessage(text: String) {
         let title = NSLocalizedString("alert_message_title", comment: "")
         let dialog = ZAlertView(title: title, message: text, closeButtonText: NSLocalizedString("alert_message_button_close", comment: ""), closeButtonHandler:
@@ -72,5 +81,13 @@ extension UIViewController {
         }
         
         return nil
+    }
+    
+    func imageWithImage(image:UIImage, scaledToSize newSize:CGSize) -> UIImage{
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+        image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return newImage
     }
 }

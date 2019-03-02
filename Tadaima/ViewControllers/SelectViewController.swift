@@ -28,6 +28,8 @@ class SelectViewController: UIViewController {
         
         parent_lbl.text = NSLocalizedString("login_parent_title", comment: "")
         child_lbl.text = NSLocalizedString("login_children_title", comment: "")
+        
+        UserDefaults.standard.set("", forKey: mUserCreated)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,6 +52,8 @@ class SelectViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             let vc = mainStoryboard.instantiateViewController(withIdentifier: "ChildLogin") as? ChildLoginViewController
             self.navigationController?.pushViewController(vc!, animated: true)
+//            let vc = mainStoryboard.instantiateViewController(withIdentifier: "ChildrenMap") as? ChildrenMapViewController
+//            self.navigationController?.pushViewController(vc!, animated: true)
         }
     }
     

@@ -9,6 +9,7 @@
 import UIKit
 import FlagPhoneNumber
 import Firebase
+import MBProgressHUD
 
 class PhoneLoginViewController: UIViewController {
 
@@ -38,12 +39,10 @@ class PhoneLoginViewController: UIViewController {
     
     @IBAction func acceptBtn_clicked(_ sender: Any) {
         
-        let phoneNumber = phone_txt.text
-        if phoneNumber?.isValidPhoneNumber() != true {
-            self.showAlertMessageWithKey(key: "phone_error_alert")
-            return
-        }
+        let phoneNumber = phone_txt.getFormattedPhoneNumber(format: .E164)
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber!, uiDelegate: nil) { (verificationID, error) in
+            MBProgressHUD.hide(for: self.view, animated: true)
             if let error = error {
                 self.showAlertMessage(text: error.localizedDescription)
                 return

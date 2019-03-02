@@ -68,6 +68,7 @@ class LoginViewController: UIViewController {
         let firebaseAuth = Auth.auth()
         
         if method == 1 {
+            UserDefaults.standard.set("Yes", forKey: mUserCreated)
             firebaseAuth.createUser(withEmail: emailTxt!, password: passwordTxt!) { (result, error) in
                 
                 MBProgressHUD.hide(for: self.view, animated: true)
@@ -77,7 +78,7 @@ class LoginViewController: UIViewController {
                 }
                 
                 guard let user = result?.user else { return }
-                self.ref.child(mParent + user.uid).setValue([mToken: token!, mFamilyName: "", mLocation: [mLatitude:0, mLongitude:0], mEmail: user.email as! String, mPhoneNumber: ""])
+                self.ref.child(mParent + "/" + user.uid).setValue([mToken: token!, mFamilyName: "", mLocation: [mLatitude:0.0, mLongitude:0.0], mEmail: user.email as! String, mPhoneNumber: ""])
                 let vc = mainStoryboard.instantiateViewController(withIdentifier: "PhoneLogin") as? PhoneLoginViewController
                 self.navigationController?.pushViewController(vc!, animated: true)
             }
@@ -93,8 +94,9 @@ class LoginViewController: UIViewController {
             }
             
             guard (result?.user) != nil else { return }
-            let vc = mainStoryboard.instantiateViewController(withIdentifier: "ParentInfo") as? ParentInfoViewController
-            self.navigationController?.pushViewController(vc!, animated: true)
+            let vc = mainStoryboard.instantiateViewController(withIdentifier: "navDrawer") as? UINavigationController
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = vc
         }
     }
 }

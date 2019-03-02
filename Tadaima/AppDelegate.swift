@@ -11,6 +11,7 @@ import IQKeyboardManager
 import GoogleMobileAds
 import Firebase
 import UserNotifications
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -23,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         IQKeyboardManager.shared().isEnabled = true
         GADMobileAds.configure(withApplicationID: "ca-app-pub-3350101969936788~1374646292")
+        GMSServices.provideAPIKey("AIzaSyCSt18J1Rj-7Xx6NHjYlJ-cAXpCyoVbG4U")
         FirebaseApp.configure()
         
         if #available(iOS 10.0, *) {

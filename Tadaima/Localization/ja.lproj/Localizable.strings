@@ -7,3 +7,127 @@
 */
 
 "app_name" = "ただいま";
+
+"login_parent_title" = "親";
+
+"login_children_title" = "子供";
+
+"login_button_email_title" = "メールアドレスでログイン";
+
+"signup_button_email_title" = "メールアドレスで登録する";
+
+"login_button_scanqr_title" = "QRを読み取る";
+
+"login_button_library_title" = "写真フォルダから読み取る";
+
+"import_photo_from_library_title" = "写真フォルダから取り込む";
+
+"confirm_child_button_title" = "承認する";
+
+"email_error_alert" = "メールアドレスの形式が違います";
+
+"phone_error_alert" = "電話番号の形式が違います";
+
+"password_error_alert" = "最低6文字入力してください";
+
+"qrcode_error_alert" = "正しいQRをお取り込みください";
+
+"alert_message_title" = "注意";
+
+"success_message_title" = "成功";
+
+"success_message_text" = "もう一度ログインしてください";
+
+"alert_message_button_close" = "了解";
+
+"profile_photo_change_title" = "クリックして写真を変える";
+
+"mobile_number_text_placeholder" = "電話番号を入力してください";
+
+"terms_and_condition_title" = "本サービスご利用の前に、以下の利用規約を確認してください。 当社は本サービスにおけるすべての権利を有します。また本サービスでは、メールアドレス、電話番号 、位置情報等、ユーザーの個人情報をお尋ねする場合がございますが、これらの個人情報が不正にアクセス・利用されることはございません。ご同意いただける場合は「同意する」を選択して、次へお進みください。";
+
+"terms_and_condition_content" = "利用規約";
+
+"phone_auth_button_title" = "承認し、次へ行く";
+
+"spinner_loading_title_verification" = "ログイン中...";
+
+"spinner_loading_information" = "ローディング中...";
+
+"phone_verification_label_title" = "番号を承認中";
+
+"phone_verification_hint_title" = "タップして手動で入力する";
+
+"login_text_email_placeholder" = "メールアドレス";
+
+"login_text_password_placeholder" = "パスワード";
+
+"email_login_button_title" = "ログイン";
+
+"email_signup_button_title" = "登録する";
+
+"parent_family_name_placeholder_title" = "名字を入力してください";
+
+"parent_set_home_button_title" = "自宅の所在地を入力してください";
+
+"parent_add_children_button_title" = "子供を追加する";
+
+"child_name_label_placeholder_title" = "子供の名前";
+
+"child_age_label_placeholder_title" = "年齢";
+
+"parent_save_qrcode_to_gallery_msg" = "写真フォルダにセーブできました";
+
+"parent_save_qrcode_to_gallery_alert" = "写真フォルダへのセーブに失敗しました";
+
+"child_contact_number_label_placeholder_title" = "緊急連絡先";
+
+"child_generate_qr_button_title" = "QRを作成する";
+
+"parent_qr_code_desc_title" = "子供の携帯画面を読み取る";
+
+"parent_qr_save_button_title" = "写真フォルダにセーブする";
+
+"children_qr_scan_complete_button_title" = "読み取り完了";
+
+"children_scan_description_text" = "QRコードを読み取る";
+
+"children_qr_description_label_title" = "家に着き次第自動的に親の元に連絡が入ります";
+
+"children_qr_accept_gps_button_title" = "GPSの使用を許可する";
+
+"main_manually_update_button_title" = "所在地を手動で更新する";
+
+"main_painc_mode_button_title" = "異常事態";
+
+"alert_empty_familyname_text" = "名字を入力してください";
+
+"alert_empty_child_name_title" = "子供の名前を入力してください";
+
+"alert_empty_child_age_title" = "子供の年齢を入力してください";
+
+"alert_empty_child_number_title" = "緊急連絡先を入力してください";
+
+"alert_empty_home_location" = "自宅の所在地を入力してください";
+
+"alert_something_went_wrong" = "エラーがでました!";
+
+"drawer_menu_home" = "ホーム";
+
+"drawer_menu_map" = "マップ";
+
+"drawer_childmenu_home" = "=ホーム";
+
+"drawer_childmenu_emergency" = "緊急";
+
+"drawer_menu_logout" = "ログアウト";
+
+"drawer_menu_logout_title" = "間違いありませんか？";
+
+"drawer_menu_logout_description" = "本当にログアウトしますか？";
+
+"drawer_menu_logout_yes" = "はい";
+
+"drawer_menu_logout_no" = "いいえ";
+
+"drawer_menu_phone_number" = "電話番号を変更する";

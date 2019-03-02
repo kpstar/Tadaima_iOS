@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MBProgressHUD
+import Firebase
 
 class ConfirmQRViewController: UIViewController {
 
@@ -16,11 +18,31 @@ class ConfirmQRViewController: UIViewController {
     @IBOutlet weak var desc_lbl: UILabel!
     
     var qrCode: String?
+    var parentId: String?
+    var childId: String?
+    var phoneNumber: String?
+    let ref = Database.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         customizeUI()
+        getPhoneNumber()
+    }
+    
+    func getPhoneNumber() {
+        
+        parentId = self.qrCode?.getParentID()
+        childId = self.qrCode?.getChildID()
+        
+        ref.child(mChildren + "/" + parentId!).child(childId!).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            self.phoneNumber = value?[mPhoneNumber] as? String ?? ""
+        }) { (error) in
+            self.showAlertMessage(text: error.localizedDescription)
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     func customizeUI() {
@@ -34,11 +56,32 @@ class ConfirmQRViewController: UIViewController {
         accept_btn.layer.borderWidth = 0.5
         accept_btn.layer.backgroundColor = UIColor.colorBlue.cgColor
         
-        qrcode_img.image = self.generateQRCode(from: qrCode!)
+        let qrCodeImage = self.generateQRCode(from: qrCode!)!
+        let scaleX = qrcode_img.frame.size.width / qrCodeImage.size.width
+        let scaleY = qrcode_img.frame.size.height / qrCodeImage.size.height
+
+        let transformedImage = qrCodeImage.ciImage?.transformed(by: CGAffineTransform(scaleX: scaleX, y: scaleY))
+
+        qrcode_img.image = UIImage(ciImage: transformedImage!)
     }
     
     @IBAction func acceptBtn_clicked(_ sender: Any) {
         
-        
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "PhoneVerification") as? PhoneVerificationViewController
+        vc?.childUid = childId
+        vc?.parentUid = parentId
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber!, uiDelegate: nil) { (verificationID, error) in
+            MBProgressHUD.hide(for: self.view, animated: true)
+            if let error = error {
+                self.showAlertMessage(text: error.localizedDescription)
+                return
+            }
+            let vc = mainStoryboard.instantiateViewController(withIdentifier: "PhoneVerification") as? PhoneVerificationViewController
+            vc?.verificationId = verificationID
+            vc?.childUid = self.childId
+            vc?.parentUid = self.parentId
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
     }
 }

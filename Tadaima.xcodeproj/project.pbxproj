@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		080029542222B097004156FF /* QRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080029532222B097004156FF /* QRCodeGenerator.swift */; };
 		082FC82F220EC6F70030A56A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082FC82E220EC6F70030A56A /* AppDelegate.swift */; };
 		082FC831220EC6F70030A56A /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082FC830220EC6F70030A56A /* SelectViewController.swift */; };
 		082FC834220EC6F70030A56A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082FC832220EC6F70030A56A /* Main.storyboard */; };
@@ -25,16 +26,21 @@
 		08615A4A221265DD00CA77FE /* ParentMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08615A49221265DD00CA77FE /* ParentMapViewController.swift */; };
 		08615A4C2212660100CA77FE /* ChildrenMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08615A4B2212660000CA77FE /* ChildrenMapViewController.swift */; };
 		08615C6622139F2B00CA77FE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08615C6522139F2B00CA77FE /* Constants.swift */; };
+		086BB8D32224D4C800E58F77 /* ChildMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086BB8D22224D4C800E58F77 /* ChildMenuViewController.swift */; };
+		0876FFC622165FD5006F3A5D /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876FFC522165FD5006F3A5D /* EmergencyViewController.swift */; };
 		08CE8CDA220EE497009D41F4 /* ParentLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CE8CD9220EE497009D41F4 /* ParentLoginViewController.swift */; };
 		08CE8CDC220EE4AC009D41F4 /* ChildLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CE8CDB220EE4AC009D41F4 /* ChildLoginViewController.swift */; };
 		08CE8D23220F7349009D41F4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CE8D22220F7349009D41F4 /* UIColorExtension.swift */; };
 		08CE8D25220F7C6E009D41F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CE8D24220F7C6E009D41F4 /* LoginViewController.swift */; };
 		08CE8D42220F8577009D41F4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08CE8D44220F8577009D41F4 /* Localizable.strings */; };
 		08CE8D49220F8B41009D41F4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08CE8D4B220F8B41009D41F4 /* InfoPlist.strings */; };
+		08D2CAFC221E688D00D939DA /* ChildrenInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D2CAFB221E688D00D939DA /* ChildrenInfoViewController.swift */; };
+		08D3B9BE221F899100CB89CA /* GenerateQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D3B9BD221F899100CB89CA /* GenerateQRViewController.swift */; };
 		14CD9F11B262B76963529CC1 /* Pods_Tadaima.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E475DDBF0D1F248CB0D1743 /* Pods_Tadaima.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		080029532222B097004156FF /* QRCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGenerator.swift; sourceTree = "<group>"; };
 		082FC82B220EC6F70030A56A /* Tadaima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tadaima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		082FC82E220EC6F70030A56A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		082FC830220EC6F70030A56A /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +62,8 @@
 		08615A49221265DD00CA77FE /* ParentMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentMapViewController.swift; sourceTree = "<group>"; };
 		08615A4B2212660000CA77FE /* ChildrenMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenMapViewController.swift; sourceTree = "<group>"; };
 		08615C6522139F2B00CA77FE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		086BB8D22224D4C800E58F77 /* ChildMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildMenuViewController.swift; sourceTree = "<group>"; };
+		0876FFC522165FD5006F3A5D /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 		08CE8CD9220EE497009D41F4 /* ParentLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentLoginViewController.swift; sourceTree = "<group>"; };
 		08CE8CDB220EE4AC009D41F4 /* ChildLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildLoginViewController.swift; sourceTree = "<group>"; };
 		08CE8D22220F7349009D41F4 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -66,6 +74,8 @@
 		08CE8D45220F857D009D41F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08CE8D4A220F8B41009D41F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08CE8D4C220F8B42009D41F4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		08D2CAFB221E688D00D939DA /* ChildrenInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenInfoViewController.swift; sourceTree = "<group>"; };
+		08D3B9BD221F899100CB89CA /* GenerateQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQRViewController.swift; sourceTree = "<group>"; };
 		7DD776212663858789AFB7A3 /* Pods-Tadaima.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tadaima.release.xcconfig"; path = "Target Support Files/Pods-Tadaima/Pods-Tadaima.release.xcconfig"; sourceTree = "<group>"; };
 		8E475DDBF0D1F248CB0D1743 /* Pods_Tadaima.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tadaima.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC04E70EC1583EDF8A09E03E /* Pods-Tadaima.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tadaima.debug.xcconfig"; path = "Target Support Files/Pods-Tadaima/Pods-Tadaima.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +144,10 @@
 				08615A472212630900CA77FE /* ParentMenuViewController.swift */,
 				08615A49221265DD00CA77FE /* ParentMapViewController.swift */,
 				08615A4B2212660000CA77FE /* ChildrenMapViewController.swift */,
+				0876FFC522165FD5006F3A5D /* EmergencyViewController.swift */,
+				08D2CAFB221E688D00D939DA /* ChildrenInfoViewController.swift */,
+				08D3B9BD221F899100CB89CA /* GenerateQRViewController.swift */,
+				086BB8D22224D4C800E58F77 /* ChildMenuViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -145,6 +159,7 @@
 				08615A392210FC7000CA77FE /* StringExtension.swift */,
 				08615A3F22118BA700CA77FE /* ViewControllerExtension.swift */,
 				08615C6522139F2B00CA77FE /* Constants.swift */,
+				080029532222B097004156FF /* QRCodeGenerator.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -370,10 +385,14 @@
 			files = (
 				08615A462212615700CA77FE /* ParentInfoViewController.swift in Sources */,
 				08615A4022118BA700CA77FE /* ViewControllerExtension.swift in Sources */,
+				086BB8D32224D4C800E58F77 /* ChildMenuViewController.swift in Sources */,
+				08D2CAFC221E688D00D939DA /* ChildrenInfoViewController.swift in Sources */,
 				08CE8D25220F7C6E009D41F4 /* LoginViewController.swift in Sources */,
 				08615A3A2210FC7000CA77FE /* StringExtension.swift in Sources */,
+				080029542222B097004156FF /* QRCodeGenerator.swift in Sources */,
 				08615A422211C44700CA77FE /* PhoneLoginViewController.swift in Sources */,
 				086159F4220FD1D500CA77FE /* LibraryQRViewController.swift in Sources */,
+				08D3B9BE221F899100CB89CA /* GenerateQRViewController.swift in Sources */,
 				086159F2220FD1C100CA77FE /* CameraQRViewController.swift in Sources */,
 				082FC831220EC6F70030A56A /* SelectViewController.swift in Sources */,
 				08CE8CDC220EE4AC009D41F4 /* ChildLoginViewController.swift in Sources */,
@@ -386,6 +405,7 @@
 				08CE8CDA220EE497009D41F4 /* ParentLoginViewController.swift in Sources */,
 				08615A4A221265DD00CA77FE /* ParentMapViewController.swift in Sources */,
 				08615C6622139F2B00CA77FE /* Constants.swift in Sources */,
+				0876FFC622165FD5006F3A5D /* EmergencyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,8 @@
 //
-//  ParentMenuViewController.swift
+//  ChildMenuViewController.swift
 //  Tadaima
 //
-//  Created by KpStar on 2/12/19.
+//  Created by KpStar on 2/26/19.
 //  Copyright © 2019 Tadaima. All rights reserved.
 //
 
@@ -10,21 +10,21 @@ import UIKit
 import KYDrawerController
 import Firebase
 
-class ParentMenuViewController: UIViewController {
-
+class ChildMenuViewController: UIViewController {
+    
     @IBOutlet weak var profile_img: UIImageView!
     @IBOutlet weak var desc_lbl: UILabel!
     @IBOutlet weak var menu_tbl: UITableView!
     
     var drawer: KYDrawerController? {
         get {
-            return self.parent as? KYDrawerController
+            return self.navigationController?.parent as? KYDrawerController
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         menu_tbl.delegate = self
         menu_tbl.dataSource = self
         
@@ -37,17 +37,18 @@ class ParentMenuViewController: UIViewController {
     }
 }
 
-extension ParentMenuViewController: UITableViewDelegate, UITableViewDataSource {
+extension ChildMenuViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
+        
         let cell = UITableViewCell()
         var title = NSLocalizedString("drawer_menu_home", comment: "")
         if indexPath.row == 1 {
-            title = NSLocalizedString("drawer_menu_map", comment: "")
+            title = NSLocalizedString("drawer_childmenu_emergency", comment: "")
         } else if indexPath.row == 2 {
             title = NSLocalizedString("drawer_menu_logout", comment: "")
         }
@@ -64,10 +65,12 @@ extension ParentMenuViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.row {
         case 0:
-            drawer?.performSegue(withIdentifier: "segueMain", sender: nil)
+            drawer?.performSegue(withIdentifier: "segueChildMain", sender: nil)
+            UserDefaults.standard.set("No", forKey: mEmergency)
             drawer?.setDrawerState(.closed, animated: true)
         case 1:
-            drawer?.performSegue(withIdentifier: "parentSegueMap", sender: nil)
+            drawer?.performSegue(withIdentifier: "segueChildMain", sender: nil)
+            UserDefaults.standard.set("Yes", forKey: mEmergency)
             drawer?.setDrawerState(.closed, animated: true)
         case 2:
             do {
@@ -82,3 +85,4 @@ extension ParentMenuViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
+

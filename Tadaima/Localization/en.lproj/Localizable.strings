@@ -34,6 +34,10 @@
 
 "alert_message_title" = "Alert";
 
+"success_message_title" = "Success";
+
+"success_message_text" = "Successfully registered. \nPlease login again.";
+
 "alert_message_button_close" = "OK";
   
 "profile_photo_change_title" = "Click to change photo";
@@ -91,7 +95,7 @@
 "children_qr_description_label_title" = "Notification will be sent to your parents automatically when you reach home!";
   
 "children_qr_accept_gps_button_title" = "Accept GPS permission";
-  
+
 "main_manually_update_button_title" = "Manually Update Location";
   
 "main_painc_mode_button_title" = "PANIC MODE";
@@ -107,6 +111,14 @@
 "alert_empty_home_location" = "Please set your home location";
 
 "alert_something_went_wrong" = "Something went wrong.";
+
+"placeholder_family_name" = "Family name";
+
+"placeholder_child_name" = "Name";
+
+"placeholder_child_age" = "Age";
+
+"placeholder_emergency_contact_number" = "Emergency Contact Number";
   
 "drawer_menu_home" = "Home";
   

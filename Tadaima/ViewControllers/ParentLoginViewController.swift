@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
+import Firebase
 
 class ParentLoginViewController: UIViewController {
     
@@ -18,9 +19,34 @@ class ParentLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         customizeUI()
         self.showAdMob()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        Auth.auth().addStateDidChangeListener {(auth, user) in
+            
+            if user == nil {
+                return
+            }
+            if user?.phoneNumber != nil {
+                do {
+                    try Auth.auth().signOut()
+                    let vc = mainStoryboard.instantiateViewController(withIdentifier: "Login") as? LoginViewController
+                    vc?.method = 0
+                    self.navigationController?.pushViewController(vc!, animated: true)
+                } catch {
+                    
+                }
+                return
+            } else if user?.email != nil && UserDefaults.standard.string(forKey: mUserCreated) == "" {
+                let vc = mainStoryboard.instantiateViewController(withIdentifier: "navDrawer") as? UINavigationController
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = vc
+            }
+        }
     }
     
     func customizeUI() {
@@ -48,10 +74,10 @@ class ParentLoginViewController: UIViewController {
     
     @IBAction func signupBtn_clicked(_ sender: Any) {
         
-//        let vc = mainStoryboard.instantiateViewController(withIdentifier: "Login") as? LoginViewController
-//        vc?.method = 1
-//        self.navigationController?.pushViewController(vc!, animated: true)
-        let vc = mainStoryboard.instantiateViewController(withIdentifier: "PhoneLogin") as? PhoneLoginViewController
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "Login") as? LoginViewController
+        vc?.method = 1
         self.navigationController?.pushViewController(vc!, animated: true)
+//        let vc = mainStoryboard.instantiateViewController(withIdentifier: "PhoneLogin") as? PhoneLoginViewController
+//        self.navigationController?.pushViewController(vc!, animated: true)
     }
 }
