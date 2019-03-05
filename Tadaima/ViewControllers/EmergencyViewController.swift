@@ -16,4 +16,8 @@ class EmergencyViewController: UIViewController {
 
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.performSegue(withIdentifier: "seguechildMain", sender: nil)
+    }
 }

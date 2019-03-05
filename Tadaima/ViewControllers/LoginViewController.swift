@@ -72,7 +72,6 @@ class LoginViewController: UIViewController {
             firebaseAuth.createUser(withEmail: emailTxt!, password: passwordTxt!) { (result, error) in
                 
                 MBProgressHUD.hide(for: self.view, animated: true)
-                
                 if error != nil {
                     this.showAlertMessage(text: (error?.localizedDescription)!)
                 }
@@ -92,7 +91,8 @@ class LoginViewController: UIViewController {
             if error != nil {
                 this.showAlertMessage(text: (error?.localizedDescription)!)
             }
-            
+            guard let user = result?.user else { return }
+            self.ref.child(mParent + "/" + user.uid).updateChildValues([mToken: token!])
             guard (result?.user) != nil else { return }
             let vc = mainStoryboard.instantiateViewController(withIdentifier: "navDrawer") as? UINavigationController
             let appDelegate = UIApplication.shared.delegate as! AppDelegate

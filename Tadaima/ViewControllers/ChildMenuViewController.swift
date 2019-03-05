@@ -18,7 +18,7 @@ class ChildMenuViewController: UIViewController {
     
     var drawer: KYDrawerController? {
         get {
-            return self.navigationController?.parent as? KYDrawerController
+            return self.parent as? KYDrawerController
         }
     }
     
@@ -65,12 +65,12 @@ extension ChildMenuViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.row {
         case 0:
-            drawer?.performSegue(withIdentifier: "segueChildMain", sender: nil)
             UserDefaults.standard.set("No", forKey: mEmergency)
+            drawer?.performSegue(withIdentifier: "childSegueMain", sender: nil)
             drawer?.setDrawerState(.closed, animated: true)
         case 1:
-            drawer?.performSegue(withIdentifier: "segueChildMain", sender: nil)
             UserDefaults.standard.set("Yes", forKey: mEmergency)
+            drawer?.performSegue(withIdentifier: "childSegueMain", sender: nil)
             drawer?.setDrawerState(.closed, animated: true)
         case 2:
             do {

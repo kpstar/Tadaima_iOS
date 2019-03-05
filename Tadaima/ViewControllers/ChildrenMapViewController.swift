@@ -40,6 +40,7 @@ class ChildrenMapViewController: UIViewController, GMSMapViewDelegate {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        locationManager.allowsBackgroundLocationUpdates = true
         mapView.delegate = self
     }
     
@@ -125,7 +126,7 @@ class ChildrenMapViewController: UIViewController, GMSMapViewDelegate {
             self.emergency_lbl.alpha = 1.0
             self.emergency_view.isHidden = true
             UserDefaults.standard.set("No", forKey: mEmergency)
-            self.ref.child(mChildren + "/" + self.pUid!).child(self.chUid!).updateChildValues([mStatus: "Emergency"])
+            self.ref.child(mChildren + "/" + self.pUid!).child(self.chUid!).updateChildValues([mStatus: "emergency"])
         }
     }
     
@@ -190,5 +191,22 @@ extension ChildrenMapViewController: CLLocationManagerDelegate {
         
         self.myLocation = location.coordinate
         self.updateMyLocation()
+        self.updateMyStatus()
+    }
+    
+    func updateMyStatus() {
+        
+        var status = "none"
+        if self.homeMarker == nil {
+            return
+        }
+        let me: CLLocationCoordinate2D = (self.myMarker?.position)!
+        let home: CLLocationCoordinate2D = (self.homeMarker?.position)!
+        if (me.latitude > home.latitude - 0.01) && (me.latitude < home.latitude + 0.01) && (me.longitude > home.longitude - 0.01) && (me.longitude < home.longitude + 0.01) {
+            status = "home"
+        } else {
+            status = "away"
+        }
+        ref.child(mChildren + "/" + self.pUid!).child(self.chUid!).updateChildValues([mStatus: status])
     }
 }

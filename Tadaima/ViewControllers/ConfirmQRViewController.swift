@@ -35,8 +35,10 @@ class ConfirmQRViewController: UIViewController {
         parentId = self.qrCode?.getParentID()
         childId = self.qrCode?.getChildID()
         
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         ref.child(mChildren + "/" + parentId!).child(childId!).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
+            MBProgressHUD.hide(for: self.view, animated: true)
             let value = snapshot.value as? NSDictionary
             self.phoneNumber = value?[mPhoneNumber] as? String ?? ""
         }) { (error) in

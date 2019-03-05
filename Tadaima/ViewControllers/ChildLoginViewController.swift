@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
+import Firebase
 
 class ChildLoginViewController: UIViewController {
     
@@ -15,12 +16,38 @@ class ChildLoginViewController: UIViewController {
     @IBOutlet weak var library_btn: UIButton!
     
     var bannerView: GADBannerView = GADBannerView(adSize: kGADAdSizeBanner)
+    var handle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         customizeUI()
         self.showAdMob()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        handle = Auth.auth().addStateDidChangeListener {(auth, user) in
+            
+            if user == nil {
+                return
+            }
+            if user?.phoneNumber != nil {
+                if UserDefaults.standard.string(forKey: mParentUid) == "" || UserDefaults.standard.string(forKey: mChildUid) == "" {
+                    return
+                }
+                let vc = mainStoryboard.instantiateViewController(withIdentifier: "navChildDrawer") as? UINavigationController
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = vc
+                UserDefaults.standard.set("No", forKey: mEmergency)
+                return
+            }
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        Auth.auth().removeStateDidChangeListener(handle!)
     }
     
     @IBAction func cameraBtn_clicked(_ sender: Any) {
